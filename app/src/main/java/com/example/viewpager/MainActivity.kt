@@ -26,6 +26,9 @@ class MainActivity : BaesActivity() {
         mvpa = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mvpa
 
+        //텝레이아웃의 기능으로 뷰페이저에 붙여주기
+        myTabLayout.setupWithViewPager(mainViewPager)
+
     }
 
 
