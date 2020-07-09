@@ -7,6 +7,15 @@ import com.example.viewpager.fragment.FirstFragment
 import com.example.viewpager.fragment.SecondFragment
 
 class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position){
+            0 -> "첫번째 Frag"
+            else -> "두번째 Frag"
+        }
+    }
+
+
     override fun getItem(position: Int): Fragment {
 
 //        when (position) {
