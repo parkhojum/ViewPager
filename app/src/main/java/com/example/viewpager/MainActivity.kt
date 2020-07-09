@@ -2,8 +2,12 @@ package com.example.viewpager
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.viewpager.Adapter.MainViewPagerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaesActivity() {
+
+    lateinit var mvpa : MainViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +21,10 @@ class MainActivity : BaesActivity() {
     }
 
     override fun setValues() {
+
+        // 뷰페이져용 어댑터 변수 초기화
+        mvpa = MainViewPagerAdapter(supportFragmentManager)
+        mainViewPager.adapter = mvpa
 
     }
 
